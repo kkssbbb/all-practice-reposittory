@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content} )}">
+
+    <th:block th:fragment="content">
+
+        <h1 class="mt-4">GuestBook List Page
+            <span>
+                <a th:href="@{/guestbook/register}">
+                    <button type="button" class="btn btn-outline-primary">REGISTER
+                    </button>
+                </a>
+            </span>
+        </h1>
+
+
+        <form action="/guestbook/list" method="get" id="searchForm">
+            <div class="input-group">
+                <input type="hidden" name="page" value = "1">
+                <div class="input-group-prepend">
+                    <select class="custom-select" name="type">
+                        <option th:selected="${pageRequestDTO.type == null}">-------</option>
+                        <option value="t" th:selected="${pageRequestDTO.type =='t'}" >제목</option>
+                        <option value="c" th:selected="${pageRequestDTO.type =='c'}"  >내용</option>
+                        <option value="w"  th:selected="${pageRequestDTO.type =='w'}" >작성자</option>
+                        <option value="tc"  th:selected="${pageRequestDTO.type =='tc'}" >제목 + 내용</option>
+                        <option value="tcw"  th:selected="${pageRequestDTO.type =='tcw'}" >제목 + 내용 + 작성자</option>
+                    </select>
+                </div>
+                <input class="form-control" name="keyword" th:value="${pageRequestDTO.keyword}">
+                <div class="input-group-append" id="button-addon4">
+                    <button class="btn btn-outline-secondary btn-search" type="button">Search</button>
+                    <button class="btn btn-outline-secondary btn-clear" type="button">Clear</button>
+                </div>
+            </div>
+        </form>
+
+
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Writer</th>
+                <th scope="col">Regdate</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr th:each="dto : ${result.dtoList}" >
+                <th scope="row">
+                    <a th:href="@{/guestbook/read(gno = ${dto.gno},
+                    page= ${result.page},
+                    type=${pageRequestDTO.type} ,
+                    keyword = ${pageRequestDTO.keyword})}">
+                        [[${dto.gno}]]
+                    </a>
+                </th>
+                <td>[[${dto.title}]]</td>
+                <td>[[${dto.writer}]]</td>
+                <td>[[${#temporals.format(dto.regDate, 'yyyy/MM/dd')}]]</td>
+            </tr>
+
+
+
+            </tbody>
+        </table>
+
+
+
+    </th:block>
+
+</th:block>

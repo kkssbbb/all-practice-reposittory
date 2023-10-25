@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "SDSamliphopangche_Outline";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "SDSamliphopangche_Outline";
+}
+
+#title-name {
+  margin-top: 100px;
+}
+
+form {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+select {
+  margin-top: 20px;
+}
+
+#table-id {
+  margin-top: 100px;
+}
+
+.savebtn {
+  margin-top: 20px;
+  background: #1aab8a;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 60px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+.savebtn:hover {
+  background: #fff;
+  color: #1aab8a;
+}
+.savebtn:before,
+.savebtn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #1aab8a;
+  transition: 400ms ease all;
+}
+.savebtn:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.savebtn:hover:before,
+.savebtn:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}

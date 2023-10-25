@@ -1,0 +1,3 @@
+[submodule "oop-practice"]
+	path = oop-practice
+	url = https://github.com/kkssbbb/oop-practice.git

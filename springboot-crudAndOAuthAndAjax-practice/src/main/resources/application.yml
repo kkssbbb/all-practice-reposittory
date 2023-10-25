@@ -1,0 +1,43 @@
+# .properties ???? ??????? .yml ??? ??
+
+server:
+  port: 8000
+  servlet:
+    context-path:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul #DB연결정보 설정
+    username: bin #DB 계정 설정
+    password: bin1234 # DB 비밀번호 설정
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update # hibernate를 사용해서 DDL을 생성하기 위함 ,create = 서버 재구동시 db정보 새로시작
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #PhysicalNamingStrategyStandardImpl : ??? ??? ??? ???? ??
+      use-new-id-generator-mappings: false # jpa? ?? ?? ??? ???? ?? (strategy = GenerationType.IDENTITY) //IDENTITY : ?????? ??? DB? ??? ??? ????.
+    show-sql: true  #hibernate가 실행한 SQL 쿼리문을 보기 위함
+    properties:
+      hibernate.format_sql: true #???? ??????? ???? ???? ????.
+
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+
+
+cos:
+  key: cos1234 #중요한키 노출되면 안 됌  ,카카오 로그인을 할 때 회원들의 비밀번호를 cos1234로 통일

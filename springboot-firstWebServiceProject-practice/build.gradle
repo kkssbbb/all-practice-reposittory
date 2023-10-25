@@ -1,0 +1,49 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.firstwebservice'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+
+repositories {
+	mavenCentral()
+}
+
+test{
+	useJUnitPlatform()
+}
+dependencies {//(3)
+	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.springframework.boot:spring-boot-starter-mustache')
+
+	// lombok
+	implementation('org.projectlombok:lombok')
+	
+	implementation 'junit:junit:4.13.1'
+	annotationProcessor('org.projectlombok:lombok')
+	testImplementation('org.projectlombok:lombok')
+	testAnnotationProcessor('org.projectlombok:lombok')
+
+	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+	implementation("org.mariadb.jdbc:mariadb-java-client")
+	implementation('com.h2database:h2')
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+
+	implementation('org.projectlombok:lombok') //롬복 라이브러리 추가
+
+	implementation('org.springframework.boot:spring-boot-starter-mustache') //스프링부트에서 머스테치 사용을 위해 머스테치 스타터 의존성 추가
+
+	//스프링 시큐리티 관련 의존성
+	implementation('org.springframework.boot:spring-boot-starter-oauth2-client') //소셜 로그인 등 클라이언트 입장에서 소셜 기능 구현 시 필요한 의존성
+	                                                                             //spring.security.oauth2.client와 spring.security-oauth2.jose를 기본으로 관리해준다.
+}
+dependencies {  //Spring Data Jpa 적용
+	implementation('org.springframework.boot:spring-boot-starter-data-jpa') //Spring Data Jpa 추상화라이브러리,스프링부트 버전에 맞춰 자동으로 JPA 관련 라이버리들의 버전을 관리해 준다.
+	implementation('com.h2database:h2')
+}
+

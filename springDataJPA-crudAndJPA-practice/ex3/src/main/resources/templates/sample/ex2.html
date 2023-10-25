@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>
+            <a th:each="dto, stat : ${list}" th:text="${dto.sno % 2 == 0}? ${'이0이면출력'}: ${'0아니면'}" >
+                [[${dto.sno}]]</a>
+      <!--  <h3 th:text="${#temporals.format(dto.time, 'yyyy/mm/dd')}"></h3>-->
+
+    </li>
+</ul>
+
+</body>
+</html>

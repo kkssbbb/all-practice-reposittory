@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <script th:src="@{/js/scripts.js}"></script>
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <div th:replace="fragments/header :: header"></div>
+
+    <!-- 본문 -->
+    <div layout:fragment="content"></div>
+
+    <!-- 푸터 -->
+    <div th:replace="fragments/footer :: footer"></div>
+  </body>
+</html>

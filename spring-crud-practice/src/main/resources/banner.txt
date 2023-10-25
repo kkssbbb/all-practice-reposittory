@@ -1,0 +1,26 @@
+${AnsiColor.GREEN}                  ,-.
+${AnsiColor.GREEN}                     `\ `.
+${AnsiColor.GREEN}                      (`- `.
+${AnsiColor.GREEN}           __          `c.- \
+${AnsiColor.GREEN}          (_ `---..__   `\"_ \
+${AnsiColor.GREEN}            `(`-.__  `-._ (_c |
+${AnsiColor.GREEN}              `--.____ ( `,-  | |/
+${AnsiColor.BRIGHT_MAGENTA}                  `---(___| ,---/         ,.
+${AnsiColor.BRIGHT_MAGENTA}                   ,-;::,'|_/\-|       ,' /
+${AnsiColor.BRIGHT_MAGENTA}            _.._    ||   `-'\❤/❤|_      | ||-.
+${AnsiColor.BRIGHT_MAGENTA}    _.--.--'    `-. \`--/,-._/    `\_,--',/|,-\
+${AnsiColor.BRIGHT_MAGENTA}  .',- _     _.__  `-:_|/   (      /      )|-'|
+${AnsiColor.BRIGHT_MAGENTA}/_/_,;-  ,-'    `-._ _)_,-,-,___,'---'\___.-'
+${AnsiColor.BRIGHT_MAGENTA} |___,,.  | _    _.-'' ((_{_// /
+${AnsiColor.CYAN} \.-'  | (-' \.-'       `---'`'
+${AnsiColor.CYAN}    ,-'\__>  /|         /
+${AnsiColor.CYAN}  .',-'/|.   \ \        |
+${AnsiColor.CYAN} / / _|``.`.  `/\_     /|  ,,.
+${AnsiColor.CYAN}/  \  |  |  `-.`(_),. /((((   )
+${AnsiColor.YELLOW}|   `--\ `.`=. `-._`'|__|  `''
+${AnsiColor.YELLOW}|  ,'  |`-|   T``'',----.
+${AnsiColor.YELLOW}|      |  `.__|-,-',----.|
+${AnsiColor.YELLOW}\     / ,-' _,-;,-'      |
+${AnsiColor.YELLOW} `---'  | ,;-''       _,'
+${AnsiColor.YELLOW}        `//       _,-'
+${AnsiColor.YELLOW}          \____.-''
